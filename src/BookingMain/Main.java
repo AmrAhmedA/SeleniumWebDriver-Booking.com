@@ -14,9 +14,9 @@ import Testcases.Functionalities;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-
+        
         Functionalities b1 = new Functionalities();
-        b1.SearchingforHotels();
+        b1.SearchforFlightsNegative();
     }
 
 }
