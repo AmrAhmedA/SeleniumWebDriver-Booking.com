@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         
         Functionalities b1 = new Functionalities();
-        b1.SearchforFlightsNegative();
+        b1.SearchforFlights();
     }
 
 }
