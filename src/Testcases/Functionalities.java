@@ -268,7 +268,7 @@ public class Functionalities {
 
         String curr_URL = driver.getCurrentUrl();
         System.out.println(curr_URL);
-        
+
         //Hovering over the element with double click on heart icon 
         Actions act = new Actions(driver);
         act.doubleClick(driver.findElement(By.cssSelector(".wl-entry-container:nth-child(3) .-iconset-heart > path"))).build().perform();
@@ -290,5 +290,37 @@ public class Functionalities {
         //Closing Streams
         driver.close();
         driver.quit();
+    }
+
+    public void SearchingforHotelsNegative() {
+        // System Property for Chrome Driver   
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Amr\\Desktop\\chromedriver.exe");
+
+        // Instantiate a ChromeDriver class to establish a connection       
+        WebDriver driver = new ChromeDriver();
+
+        //Puts an implicit wait, will wait for 10 seconds before throwing exception
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        //Launch Website
+        driver.navigate().to("https://www.booking.com/");
+
+        //Maximize the Browser
+        driver.manage().window().maximize();
+
+        //Clicking on search button
+        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/form/div[1]/div[4]/div[2]/button")).click();
+
+        //Check Error Msg is displayed or not
+        if (driver.findElement(By.xpath("//*[@id=\"destination__error\"]/div")).isDisplayed()) {
+            System.out.println("Element is Present");
+        } else {
+            System.out.println("Element is Absent");
+        }
+
+        //Closing Streams
+        driver.close();
+        driver.quit();
+
     }
 }
