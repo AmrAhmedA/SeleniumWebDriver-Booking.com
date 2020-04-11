@@ -424,6 +424,10 @@ public class Functionalities {
 
     }
 
+    /**
+     ********AmrAhmed-162697********
+     */
+
     public void SearchforFlights() throws InterruptedException {
         // System Property for Chrome Driver   
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Amr\\Desktop\\chromedriver.exe");
@@ -471,7 +475,7 @@ public class Functionalities {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/main/div[1]/div/div/div[1]/div/div[2]/section[2]/div/div/div[2]/form[1]/div[1]/div/div[2]/button")).click();
 
         // if successful search happened a list of flights will be displayed - checking if there exists elements in this list
-        if (driver.findElements(By.xpath("/html/body/div[1]/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div[2]/div[5]/div[2]/div[1]/div/div[1]/div")).size()!=0) {
+        if (driver.findElements(By.xpath("/html/body/div[1]/div[1]/main/div/div[2]/div[2]/div/div[2]/div[1]/div[2]/div[5]/div[2]/div[1]/div/div[1]/div")).size() != 0) {
             System.out.println("Element is Present");
         } else {
             System.out.println("Element is Absent");
