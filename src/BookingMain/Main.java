@@ -5,7 +5,7 @@
  ****************************** */
 package BookingMain;
 
-import Testcases.Functionalities;
+import Testcases.*;
 
 /**
  *
@@ -14,19 +14,10 @@ import Testcases.Functionalities;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        
-        //remove the comment to run each one individually 
-        Functionalities b1 = new Functionalities();
-        b1.BookingSignin();
-//        b1.BookingSignout();
-//        b1.AddtoWishlist();
-//        b1.Removefromwishlist();
-//        b1.SearchforFlights();
-//        b1.SearchforFlightsNegative();
-//        b1.SearchingforHotels();
-//        b1.SearchingforHotelsNegative();
-//        b1.SubscribeToBooking();
-//        b1.SubscribeToBookingNegative();
+
+        addtoWishlist a1 = new addtoWishlist();
+        a1.AddtoWishlist();
+
     }
 
 }
