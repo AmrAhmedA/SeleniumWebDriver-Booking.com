@@ -42,7 +42,7 @@ public class searchingforHotelsNegative {
         driver.manage().window().maximize();
 
         //Clicking on search button
-        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/form/div[1]/div[4]/div[2]/button")).click();
+        driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[4]/div[2]/button")).click();
 
         //Check Error Msg is displayed or not
         if (driver.findElement(By.xpath("//*[@id=\"destination__error\"]/div")).isDisplayed()) {

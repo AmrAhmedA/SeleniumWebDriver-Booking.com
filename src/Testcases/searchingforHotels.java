@@ -42,22 +42,22 @@ public class searchingforHotels {
         driver.manage().window().maximize();
 
         //Entering destination
-        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/form/div[1]/div[1]/div[1]/div[1]/label/input")).sendKeys("Australia");
+        driver.findElement(By.xpath("//*[@id=\"ss\"]")).sendKeys("Australia");
 
         // clicking on # people
-        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/form/div[1]/div[3]/label")).click();
+        driver.findElement(By.xpath("//*[@id=\"xp__guests__toggle\"]")).click();
 
         // clicking on the -ve - decrementing # of people to be 1 person
-        driver.findElement(By.xpath("//*[@id=\"xp__guests__inputs-container\"]/div/div/div[1]/div/div[2]/button[1]")).click();
+        driver.findElement(By.xpath("//*[@id=\"xp__guests__inputs-container\"]/div/div/div[1]/div/div[2]/button[1]/span")).click();
 
         //clicking on date 
-        driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div[1]/div[2]/div/div/div/div")).click();
+        driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div[1]/div[2]/div/div/div/div/span")).click();
 
         //choosing the preferred date
-        driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div[2]/div/div/div[3]/div[2]/table/tbody/tr[3]/td[5]")).click();
+        driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[2]/div[2]/div/div/div[3]/div[2]/table/tbody/tr[4]/td[6]/span/span")).click();
 
         //clicking on the search button
-        driver.findElement(By.xpath("/html/body/div[4]/div/div/div[2]/form/div[1]/div[4]/div[2]/button")).click();
+        driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[4]/div[2]/button")).click();
 
         //Checking visibility of the header - Explore the top cities in Australia
         if (driver.findElements(By.xpath("//*[@id=\"right\"]/div[5]/div/div[1]/div/h1")).size() != 0) {
