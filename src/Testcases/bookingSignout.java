@@ -25,7 +25,6 @@ public class bookingSignout {
     /**
      ********AmrAhmed-162697********
      */
-
     public void BookingSignout() throws InterruptedException {
         // System Property for Chrome Driver   
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Amr\\Desktop\\chromedriver.exe");
