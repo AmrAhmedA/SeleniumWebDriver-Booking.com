@@ -15,8 +15,8 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        searchingforHotels s1 = new searchingforHotels();
-        s1.SearchingforHotels();
+        subscribeBooking s1 = new subscribeBooking();
+        s1.SubscribeToBooking();
 
     }
 

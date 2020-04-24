@@ -21,7 +21,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @author Amr
  */
 public class subscribeBooking {
-        /**
+
+    /**
      ********AmrAhmed-162697********
      */
     public void SubscribeToBooking() throws InterruptedException {
@@ -44,17 +45,20 @@ public class subscribeBooking {
         //Type Casting driver to scroll inside the page for the Subscribe Element
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
+//        //simple js code scrolling 1500 dpi
+//        js.executeScript("scrollBy(0,1500)");
         //simple js code scrolling 1500 dpi
-        js.executeScript("scrollBy(0,1500)");
+        js.executeScript("scrollBy(0,700)");
 
         //writing email in the textfield 
-        driver.findElement(By.xpath("/html/body/div[5]/div/div/div[2]/div[3]/div[5]/div/div/div/div[2]/div[2]/form/div/input")).sendKeys("AmrAhmed@gmail.com");
+        driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div/div[2]/div[2]/form/div/input")).sendKeys("AmrAhmed@gmail.com");
 
-        //clicking on the subscribe button
-        driver.findElement(By.xpath("/html/body/div[5]/div/div/div[2]/div[3]/div[5]/div/div/div/div[2]/div[2]/form/div/button/span")).click();
+//        //clicking on the subscribe button
+//        driver.findElement(By.xpath("/html/body/div[5]/div/div/div[2]/div[3]/div[5]/div/div/div/div[2]/div[2]/form/div/button/span")).click();
+        driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div/div[2]/div[2]/form/div/button/span")).click();
 
         //Check Element not present, after subscribing to booking services
-        if (driver.findElements(By.xpath("/html/body/div[5]/div/div/div[2]/div[2]/div[6]/div")).isEmpty()) {
+        if (driver.findElements(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div")).isEmpty()) {
             System.out.println("Element is Absent");
         } else {
             System.out.println("Element is Present");
