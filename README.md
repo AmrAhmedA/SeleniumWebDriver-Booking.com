@@ -1,1 +1,1 @@
-# University Project on Advanced Automation 
+# University Project on Advanced Automation using Selenium WebDriver
