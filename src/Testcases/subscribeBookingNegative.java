@@ -46,20 +46,23 @@ public class subscribeBookingNegative {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //simple js code scrolling 1500 dpi
-        js.executeScript("scrollBy(0,1500)");
+        js.executeScript("scrollBy(0,700)");
 
         //Entering invalid email address
-        driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div/div[2]/div[2]/form/div/input")).sendKeys("123@123");
+        driver.findElement(By.xpath("//*[@id=\"emk_banner_index\"]/div[2]/div[2]/form/div/input")).sendKeys("123@123");
 
         //clicking on the subscribe button
-        driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div/div[2]/div[2]/form/div/button/span")).click();
+        driver.findElement(By.xpath("//*[@id=\"emk_banner_index\"]/div[2]/div[2]/form/div/button")).click();
 
         //Check Element not present, after subscribing to booking services (Invalid Email Address)
-        if (driver.findElement(By.xpath("//*[@id=\"emk_banner_index\"]/div[2]/div[2]/form/p[1]")).isDisplayed()) {
+        if (driver.findElement(By.xpath("//*[@id=\"emk_banner_index\"]/div[2]/div[2]/form/p[1]")).isEnabled()) {
             System.out.println("Element is Present");
         } else {
             System.out.println("Element is Absent");
         }
+
+                //waiting for 6 seconds
+        Thread.sleep(4000);
 
         //Closing Streams
         driver.close();

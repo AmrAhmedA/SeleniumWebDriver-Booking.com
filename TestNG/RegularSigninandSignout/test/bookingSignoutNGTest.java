@@ -13,13 +13,13 @@ import org.testng.annotations.*;
  *
  * @author Amr
  */
-public class SearchForHotelsNGTest extends bookingSigninNGTest {
+public class bookingSignoutNGTest extends bookingSigninNGTest {
 
-    public SearchForHotelsNGTest() {
+    public bookingSignoutNGTest() {
     }
 
     @Test
-    public void SearchforHotel() throws InterruptedException {
+    public void SignoutFromBooking() throws InterruptedException {
         // clicking on the user panel
         driver.findElement(By.xpath("/html/body/div[1]/div/div/ul/li[6]/a/span[3]/span/span[2]")).click();
 

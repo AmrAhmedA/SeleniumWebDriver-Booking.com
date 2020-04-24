@@ -51,17 +51,19 @@ public class subscribeBooking {
         js.executeScript("scrollBy(0,700)");
 
         //writing email in the textfield 
-        driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div/div[2]/div[2]/form/div/input")).sendKeys("AmrAhmed@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"emk_banner_index\"]/div[2]/div[2]/form/div/input")).sendKeys("AmrAhmed@gmail.com");
 
 //        //clicking on the subscribe button
 //        driver.findElement(By.xpath("/html/body/div[5]/div/div/div[2]/div[3]/div[5]/div/div/div/div[2]/div[2]/form/div/button/span")).click();
-        driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div/div[2]/div[2]/form/div/button/span")).click();
+        driver.findElement(By.xpath("//*[@id=\"emk_banner_index\"]/div[2]/div[2]/form/div/button/span")).click();
 
+        //waiting for 6 seconds
+        Thread.sleep(6000);
         //Check Element not present, after subscribing to booking services
-        if (driver.findElements(By.xpath("/html/body/div[6]/div/div[1]/div[2]/div[5]/div/div/div")).isEmpty()) {
-            System.out.println("Element is Absent");
-        } else {
+        if (driver.findElement(By.xpath("//*[@id=\"emk_banner_index\"]")).isDisplayed()) {
             System.out.println("Element is Present");
+        } else {
+            System.out.println("Element is Absent");
         }
 
         //waiting for 6 seconds

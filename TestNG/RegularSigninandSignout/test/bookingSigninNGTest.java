@@ -15,19 +15,21 @@ import org.testng.annotations.*;
  *
  * @author Amr
  */
-public class bookingSigninNGTest extends openURLNGTest{
+public class bookingSigninNGTest extends openURLNGTest {
 
     public bookingSigninNGTest() {
     }
 
-    
-
     @BeforeTest
-    public void Signin() throws InterruptedException {
+    public void SignintoBooking() throws InterruptedException {
 
+        //Waiting for 6 seconds before exiting the console
+        Thread.sleep(10000);
         //Click on Math Calculators
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/ul/li[6]/a/div")).click();
+        driver.findElement(By.xpath("//*[@id=\"current_account\"]/a/div/span")).click();
 
+        //Waiting for 6 seconds before exiting the console
+        Thread.sleep(6000);
         //Click on username 
         driver.findElement(By.id("username")).click();
 
@@ -45,7 +47,7 @@ public class bookingSigninNGTest extends openURLNGTest{
 
         String Expected = driver.findElement(By.xpath("/html/body/div[1]/div/div/ul/li[6]/a/span[3]/span/span[1]")).getText();
 
-        String Actual = "Amr" ;
+        String Actual = "Amr";
         if (Expected.equals(Actual)) {
             System.out.println("Test case passed successfully ");
         } else {
@@ -53,11 +55,8 @@ public class bookingSigninNGTest extends openURLNGTest{
             System.out.println(Expected);
         }
 
-        //Waiting for 6 seconds before exiting the console
-        Thread.sleep(6000);
-
         System.out.println("This code was implemented by Amr Ahmed Abd El Rahman - 162697");
 
-        Assert.assertEquals(Expected,Actual);
+        Assert.assertEquals(Expected, Actual);
     }
 }
