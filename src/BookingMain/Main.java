@@ -15,8 +15,8 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        addtoWishlist a1 = new addtoWishlist();
-        a1.AddtoWishlist();
+        searchingforHotels s1 = new searchingforHotels();
+        s1.SearchingforHotels();
 
     }
 
