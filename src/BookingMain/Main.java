@@ -15,8 +15,8 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        subscribeBooking s1 = new subscribeBooking();
-        s1.SubscribeToBooking();
+        subscribeBookingNegative s1 = new subscribeBookingNegative();
+        s1.SubscribeToBookingNegative();
 
     }
 
