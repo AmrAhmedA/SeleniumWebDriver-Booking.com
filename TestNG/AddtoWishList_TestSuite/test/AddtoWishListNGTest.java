@@ -3,47 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Testcases;
 
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 
 /**
  *
  * @author Amr
  */
-public class addtoWishlist {
+public class AddtoWishListNGTest extends BookingSigninNGTest {
 
-    /**
-     ********AmrAhmed-162697********
-     */
+    public AddtoWishListNGTest() {
+    }
 
-    public void AddtoWishlist() throws InterruptedException {
-
-        // System Property for Chrome Driver   
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Amr\\Desktop\\chromedriver.exe");
-
-        // Instantiate a ChromeDriver class to establish a connection       
-        WebDriver driver = new ChromeDriver();
-
-        //Puts an implicit wait, will wait for 10 seconds before throwing exception
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+    @Test
+    public void AddtoWishList() {
         //Launch Website
         driver.navigate().to("https://www.booking.com/");
-
-        //Maximize the Browser
-        driver.manage().window().maximize();
-
         //Entering destination
+        driver.findElement(By.xpath("//*[@id=\"ss\"]")).clear();
         driver.findElement(By.xpath("//*[@id=\"ss\"]")).sendKeys("Australia");
 
         // clicking on # people
@@ -60,8 +43,6 @@ public class addtoWishlist {
 
         //clicking on the search button
         driver.findElement(By.xpath("//*[@id=\"frm\"]/div[1]/div[4]/div[2]/button")).click();
-
-        
 
         String curr_URL = driver.getCurrentUrl();
         System.out.println(curr_URL);
@@ -83,13 +64,8 @@ public class addtoWishlist {
         } else {
             System.out.println("Element is Absent");
         }
+        Assert.assertTrue(true);
 
-        //Closing Streams
-        driver.close();
-        driver.quit();
     }
 
-    /**
-     ********AmrAhmed-162697********
-     */
 }
