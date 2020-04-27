@@ -69,11 +69,9 @@ public class removeFromWishList {
 
         driver.findElement(By.xpath("//*[@id=\"profile-menu\"]/div[6]")).click();
 
-        
         //Hovering over the element with double click on heart icon 
         Actions act = new Actions(driver);
         act.doubleClick(driver.findElement(By.xpath("/html/body/div[5]/div[3]/div[1]/div[1]/div[2]/div[1]/ul/li/div/a"))).build().perform();
-
 
         driver.findElement(By.xpath("/html/body/div[5]/div[3]/div[1]/div[1]/div[2]/div[1]/ul/li/div/a")).click();
 
