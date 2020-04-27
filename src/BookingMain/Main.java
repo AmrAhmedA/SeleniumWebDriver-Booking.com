@@ -15,8 +15,8 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        addtoWishlist s1 = new addtoWishlist();
-        s1.AddtoWishlist();
+        removeFromWishList s1 = new removeFromWishList();
+        s1.removeFromwishList();
 
     }
 
